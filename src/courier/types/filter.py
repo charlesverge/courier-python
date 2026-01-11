@@ -5,10 +5,10 @@ from __future__ import annotations
 from typing import Union
 from typing_extensions import TypeAlias
 
+from .nested_filter_config import NestedFilterConfig
 from .single_filter_config import SingleFilterConfig
 
 __all__ = ["Filter"]
 
-Filter: TypeAlias = Union[SingleFilterConfig, "NestedFilterConfig"]
 
-from .nested_filter_config import NestedFilterConfig
+Filter: TypeAlias = Union[SingleFilterConfig, NestedFilterConfig]
